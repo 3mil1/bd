@@ -10,7 +10,11 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-<audio id="myAudio" src="birthday.mp3" loop autoplay></audio>
+<audio id="myAudio" loop autoplay preload="auto">
+    <source src="birthday.mp3" type="audio/mpeg"/>
+    This text displays if the audio tag isn't
+    supported.
+</audio>
 <div id="video-container">
     <video id="myVideo" autoplay loop muted>
         <source src="Sünnipäev2023.mp4" type="video/mp4">
