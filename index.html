@@ -10,7 +10,12 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-<audio id="myAudio" loop autoplay preload="auto">
+
+<button onclick="play()" id="playBtn" style="background-image: url(bg.jpg);">
+    Let's GO!
+</button>
+
+<audio id="myAudio" loop preload="auto">
     <source src="birthday.mp3" type="audio/mpeg"/>
     This text displays if the audio tag isn't
     supported.
@@ -22,12 +27,18 @@
     </video>
 </div>
 
-
 <button id="muteBtn" onclick="muteAudio()">
     <i id="muteIcon" class="fas fa-volume-up"></i>
 </button>
 
 <script>
+    function play() {
+        document.querySelector("#myVideo").style.display = "block";
+        document.querySelector("#muteBtn").style.display = "block";
+        document.querySelector("#myVideo").play();
+        document.querySelector("#myAudio").play();
+    }
+
     let audio = document.getElementById("myAudio");
     audio.volume = 0.5;
 
