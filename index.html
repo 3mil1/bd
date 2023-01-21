@@ -10,7 +10,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-<audio id="myAudio" src="birthday.mp3" loop></audio>
+<audio id="myAudio" src="birthday.mp3" loop autoplay></audio>
 <div id="video-container">
     <video id="myVideo" autoplay loop>
         <source src="Sünnipäev2023.mp4" type="video/mp4">
@@ -25,7 +25,6 @@
 
 <script>
     let audio = document.getElementById("myAudio");
-    audio.play();
     audio.volume = 0.5;
 
     let muteIcon = document.getElementById("muteIcon");
